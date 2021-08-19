@@ -47,7 +47,7 @@ export default class IssLocationScreen extends React.Component {
         <View style={styles.container}>
           <SafeAreaView style={styles.droidSafeArea} />
           <ImageBackground
-            style={styles.backGroundImage}
+            style={styles.backgroundImage} //corrected capitalisation
             source={require("../assets/iss_icon.png")}
           >
             <View style={styles.titleContainer}>

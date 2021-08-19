@@ -5,8 +5,11 @@ import {
   View,
   Alert,
   FlatList,
+  StatusBar, //added import
   SafeAreaView,
   ImageBackground,
+  Image, //added import
+  Dimensions, //added import
 } from "react-native";
 import axios from "axios";
 
@@ -40,11 +43,11 @@ export default class MeteorScreen extends React.Component {
     let bg_img, speed, size;
     if (meteor.threatScore <= 30) {
       bg_img = require("../assets/meteor_bg1.png");
-      speed = require("..assets/meteor_speed3.gif");
+      speed = require("../assets/meteor_speed1.gif"); //corrected file name
       size = 100;
     } else if (meteor.threat_score <= 75) {
       bg_img = require("../assets/meteor_bg2.png");
-      speed = require("../assets/meteor_speed3.gif");
+      speed = require("../assets/meteor_speed2.gif"); //corrected file name
       size = 150;
     } else {
       bg_img = require("../assets/meteor_bg3.png");
@@ -127,7 +130,6 @@ export default class MeteorScreen extends React.Component {
 
       return (
         <View style={styles.container}>
-          
           <SafeAreaView style={styles.droidSafeArea} />
           <FlatList
             keyExtractor={this.keyExtractor}
